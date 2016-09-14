@@ -13,7 +13,10 @@ This is my first attempt at creating a neural network. I made the most basic one
 
 A neural network is basically a function approximator that is crudely modeled on the interconnections neurons interface with inside our brains. Through some funky maths, they are able to approximate pretty much any continuous function.
 
-<img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/basic-neuron.svg" width="400">
+<p align="center">
+  <img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/basic-neuron.svg" height="200">
+<img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/artificial-neuron.svg" height="200">
+</p>
 
 ### So what does an nn look like and how does it work?
 
