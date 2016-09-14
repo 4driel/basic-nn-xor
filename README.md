@@ -4,7 +4,7 @@ Hello all!
 
 This is my first attempt at creating a neural network. I made the most basic one I could think of in order to get familiar with all the maths. Hopefully some of you find this example useful in your own endevours.
 
-## Prequisites
+### Prequisites
 - Basic multi-var calculus
 - Linear algebra
 
