@@ -13,6 +13,8 @@ This is my first attempt at creating a neural network. I made the most basic one
 
 A neural network is basically a function approximator that is crudely modeled on the interconnections neurons interface with inside our brains. Through some funky maths, they are able to approximate pretty much any continuous function.
 
+<img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/basic-neuron.svg" width="400">
+
 ### So what does an nn look like and how does it work?
 
 A nn has an input layer, comprised of several input units depending on the size of your input vector; an output layer, comprised of one or more output units; and in some cases one or more hidden layers.
