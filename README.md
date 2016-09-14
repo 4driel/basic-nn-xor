@@ -37,8 +37,7 @@ _Image 1. Basic neural network with 2 input units, 3 hidden units and 1 output u
 
 ## Forward-propagation
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=s_1%3Dx%5Ccdot%20W_1&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="s_1=x\cdot W_1" width="81" height="17" />
-
+<img src="http://bit.ly/UUrVmV" align="center" border="0" alt="x^2" width="22" height="18" />
 
 ## Notes
 I used these resources when making this (in case you also find them useful):
