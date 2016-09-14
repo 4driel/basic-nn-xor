@@ -8,7 +8,6 @@ This is my first attempt at creating a neural network. I made the most basic one
 - Basic multi-var calculus
 - Linear algebra
 
-## Introduction
 ### So what is this neural network you speak of?
 
 A neural network is basically a function approximator that is crudely modeled on the interconnections neurons interface with inside our brains. Through some funky maths, they are able to approximate pretty much any continuous function.
