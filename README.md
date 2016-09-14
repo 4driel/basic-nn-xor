@@ -39,11 +39,11 @@ _Image 1. Basic neural network with 2 input units, 3 hidden units and 1 output u
 - s1, s2: sumation of linear functions from the previous layer
 - a1, y: result from applying a non-linear squashing function to s1, s2
 
-## Forward-propagation
+### Forward-propagation
 
 <img src="http://bit.ly/UUrVmV" align="center" border="0" alt="x^2" width="22" height="18" />
 
-## Notes
+### Notes
 I used these resources when making this (in case you also find them useful):
 - https://github.com/stephencwelch/Neural-Networks-Demystified
 - http://stevenmiller888.github.io/mind-how-to-build-a-neural-network/
