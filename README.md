@@ -17,6 +17,8 @@ A neural network is basically a function approximator that is crudely modeled on
 <img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/artificial-neuron.svg" height="200">
 </p>
 
+test
+
 ### So what does an nn look like and how does it work?
 
 A nn has an input layer, comprised of several input units depending on the size of your input vector; an output layer, comprised of one or more output units; and in some cases one or more hidden layers.
