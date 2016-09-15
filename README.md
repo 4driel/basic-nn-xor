@@ -30,6 +30,13 @@ In simplified terms, you map your inputs to your outputs by adjusting the synapt
 
 ### Forward-propagation
 
-The first process involved in the operation of an nn is called forward-propagation. Forward-propagation does what it sounds like, it propagates the input all the way through the network until you get an output result.
+The first process involved in the operation of an nn is called forward-propagation. Forward-propagation does what it says, it propagates the input all the way through the network until you get an output result.
 
 Lets look at our first nn and try to understand what maths the input goes through before emerging from the other side.
+
+<p align="center">
+  <img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/neural-network.svg" height="200">
+</p>
+<p align="center">
+  Image 2. Simple neural network with 2 inputs, 3 hidden units, and 1 output unit.
+</p>
