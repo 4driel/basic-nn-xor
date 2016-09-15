@@ -26,4 +26,11 @@ A neural "network" is just a bunch of artificial neurons connected together.
 
 ### And how does it work?
 
-In simplified terms, you map your inputs to your outputs by adjusting the synaptic weights. And that's it.
+In simplified terms, you map your inputs to your outputs by adjusting the synaptic weights. And that's it. Sounds easy right? Let's look at an example.
+
+### Forward-propagation
+
+The first process involved in the operation of an nn is called forward-propagation. Forward-propagation does what it sounds like, it propagates the input all the way through the network into the output so you get a result.
+
+Lets look at our first nn and try to understand what maths the input goes through before emerging from the other side.
+
