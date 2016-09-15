@@ -12,7 +12,7 @@ This is my first attempt at creating a neural network. I made the most basic one
 
 A neural network is basically a function approximator that is crudely modeled on the interconnections neurons interface with inside our brains. That, through some funky maths, are able to approximate pretty much any continuous function.
 
-As can seen on the images below, an antificial neuron bears a lot of resemblance to the biological one. The dendrites can be compared to the weighted synaptic inputs W1 ... Wn and the synaptic terminations to the output a1.
+As can seen on the images below, an antificial neuron bears a lot of resemblance to the biological one. The weighted synaptic inputs W1 ... Wn are the equivalent to the dendrites and the output a1 to the synaptic terminations.
 
 A neural "network" is just a bunch of artificial neurons connected together.
 
@@ -21,12 +21,12 @@ A neural "network" is just a bunch of artificial neurons connected together.
   <img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/artificial-neuron.svg" height="200">
 </p>
 <p align="center">
-  Image 1. Left: Simplified represetation of a biological neuron. Right: Diagram of artificial neuron.
+  Image 1. Left: Simplified representation of a biological neuron. Right: Diagram of artificial neuron.
 </p>
 
 ### And how does it work?
 
-In simplified terms, you map your inputs to your outputs by adjusting the synaptic weights. And that's it. Sounds easy right? Let's look at an example.
+In simplified terms, you map your inputs to your outputs by adjusting the synaptic weights. And that's it. Sounds easy right? Let's see how it's done.
 
 ### Forward-propagation
 
