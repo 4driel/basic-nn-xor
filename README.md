@@ -54,7 +54,7 @@ Using the first weigthed sumation as an example. The result could be given like 
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/hidden-sum.jpg">
 </p>
 
-Continuing with the explanation, after calculating the first weighted sumation, next is applying the activation function to s<sup>1</sup>. In this example, well use the logistic sigmoid function as our activation function.
+Continuing with the explanation, after calculating the first weighted sumation, next is applying the activation function to s<sup>1</sup>. In this example, we'll use the logistic sigmoid function as our activation function.
 
 <p align="center">
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/sigmoid.jpg">
