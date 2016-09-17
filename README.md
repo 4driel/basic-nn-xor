@@ -43,7 +43,7 @@ The first process is called forward-propagation. And it does basically what it s
 
 As explained with the operation of a single artificial neuron. Forward propagation involves a weighted sumation of the inputs at every stage, and a squashing activation function. This would get repeated over and over depending of how many layers "deep" the network is.
 
-Calculating these values is not as hard as it would seem. As, if representing all the operations as matrix operations, the computation can be made in bulk, on a per layer basis.
+Calculating these values is not as hard as it would seem. As, if representing all the operations as matrix operations, the computations can be made in bulk, on a per layer basis.
 
 Using the first weigthed sumation as an example. The result could be given like this:
 
