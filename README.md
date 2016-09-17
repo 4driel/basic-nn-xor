@@ -39,7 +39,7 @@ To explain what processes are involved in the operation of a neural network. Let
   Image 2. Simple neural network (2 inputs, 3 hidden units, 1 output)
 </p>
 
-The first process is called forward-propagation. And it does basically what it says. It propagates the inputs trough all the diferent layers in the nn until it reaches the output, then you get a result
+The first process is called forward-propagation. And it does basically what it says. It propagates the inputs through all the different layers in the nn until it reaches the output, then you get a result.
 
 As explained with the operation of a single artificial neuron. Forward propagation involves a weighted sumation of the inputs at every stage, and a squashing activation function. This would get repeated over and over depending of how many layer "deep" the network is.
 
