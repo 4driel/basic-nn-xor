@@ -35,7 +35,7 @@ The first process involved in the operation of an nn is called forward-propagati
 Lets look at our first nn and try to understand what maths the input goes through before emerging from the other side.
 
 <p align="center">
-  ![stuff](https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/neural-network.svg)
+  <img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/neural-network.svg" height="200">
 </p>
 <p align="center">
   Image 2. Simple neural network with 2 inputs, 3 hidden units, and 1 output unit.
