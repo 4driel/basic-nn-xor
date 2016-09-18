@@ -84,11 +84,28 @@ Let's take these initial weight matrices and input:
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-w1.jpg">
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-w2.jpg">
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-x.jpg">
+  <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-y.jpg">
 </p>
+
+The full forward propagation would give these results:
 
 <p align="center">
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-s1.jpg">
+  <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-a1.jpg">
+  <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-a2.jpg">
+  <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/numerical-yhat.jpg">
 </p>
 
-[ 0.96043643  0.46803635  1.91756236]
- [-0.29696591  0.62271219  1.1089292 ]]
+The approximated values are nowhere near what they should be. This is because, as the initial weights were generated randomly, it was pretty improvable for the network to generate a good approximation on the first forward-propagation. This is what you call an "un-trained" nn. Until the weights are adjusted appropriately, the approximation will be poor.
+
+To "train" a nn, a process called "back-propagation" is used. Back-propagation is also pretty self-explainatory, it propagates the computed error backwards, adjusting the weights accordingly, so on the next forward propagation, the error is smaller.
+
+To explain the maths involved in back-propagation, we need to first define how we are going to calculate the error. A common way of doing it is the sum of squared deltas.
+
+<p align="center">
+  <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/cost-function.jpg">
+</p>
+
+To minimize the error, a gradient descent algorith is used, where the gradients are calculated by the cost function being partially differentiated with respect to each weight set. To 
+
+Following our example. The gradient with respect to w<sup>2</sup> would be calculated by ways of the chain rule
