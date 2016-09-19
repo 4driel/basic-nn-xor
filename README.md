@@ -121,7 +121,11 @@ To minimize the error, a gradient descent algorith is used, where the gradients 
 To differentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;\hat{y}}{\partial&space;W^2}"> you substitute <img src="https://latex.codecogs.com/gif.latex?\inline&space;\hat{y}=s(s^2)"> and apply the chain rule.
 
 <p align="center">
-<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;E}{\partial&space;W^2}=-\sum&space;(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;W^2}=-\sum&space;(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;s^2}\frac{\partial&space;s^2}{\partial&space;W^2}">
+<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;E}{\partial&space;W^2}=-\sum(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;W^2}" title="\frac{\partial E}{\partial W^2}=-\sum(y - \hat{y})\frac{\partial s(s^2)}{\partial W^2}" />
+</p>
+
+<p align="center">
+<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;E}{\partial&space;W^2}=-\sum(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;s^2}\frac{\partial&space;s^2}{\partial&space;W^2}" title="\frac{\partial E}{\partial W^2}=-\sum(y - \hat{y})\frac{\partial s(s^2)}{\partial s^2}\frac{\partial s^2}{\partial W^2}" />
 </p>
 
 To diferentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s(s^2))}{\partial&space;s^2}">, you simply calculate the derivative of our activation function.
