@@ -106,6 +106,20 @@ To explain the maths involved in back-propagation, we need to first define how w
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/cost-function.jpg">
 </p>
 
-To minimize the error, a gradient descent algorith is used, where the gradients are calculated by the cost function being partially differentiated with respect to each weight set. To 
+To minimize the error, a gradient descent algorith is used, where the gradients are calculated by the cost function being partially differentiated with respect to each weight set.
 
-Following our example. The gradient with respect to w<sup>2</sup> would be calculated by ways of the chain rule
+<p align="center">
+  <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/w2-gradient-expanded.jpg">
+</p>
+
+To differentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;\hat{y}}{\partial&space;W^2}"> you substitute <img src="https://latex.codecogs.com/gif.latex?\inline&space;\hat{y}=s(s^2)"> and apply the chain rule.
+
+<p align="center">
+<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;E}{\partial&space;W^2}=-\sum&space;(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;W^2}=-\sum&space;(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;s^2}\frac{\partial&space;s^2}{\partial&space;W^2}">
+</p>
+
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s(s^2))}{\partial&space;s^2}"> is simply just a differentiation of our sigmoid activation function.
+
+<p align="center">
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;s'(z)&space;=&space;\frac{e^{-z}}{(1&space;&plus;&space;e^{-z})^2}">
+</p>
