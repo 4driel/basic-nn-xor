@@ -106,7 +106,7 @@ To explain the maths involved in back-propagation, we need to first define how w
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/cost-function.jpg">
 </p>
 
-To minimize the error, a gradient descent algorith is used, where the gradients are calculated by the cost function being partially differentiated with respect to each weight set.
+To minimize the error, a gradient descent algorith is used, where the gradients are calculated by the cost function being partially differentiated with respect to each weight set. Looking at the gradient for w<sup>2</sup> first, it would go like this:
 
 <p align="center">
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/w2-gradient-expanded.jpg">
@@ -118,8 +118,14 @@ To differentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\f
 <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;E}{\partial&space;W^2}=-\sum&space;(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;W^2}=-\sum&space;(y&space;-&space;\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;s^2}\frac{\partial&space;s^2}{\partial&space;W^2}">
 </p>
 
-<img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s(s^2))}{\partial&space;s^2}"> is simply just a differentiation of our sigmoid activation function.
+To diferentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s(s^2))}{\partial&space;s^2}">, you simply calculate the derivative of our activation function.
 
 <p align="center">
-<img src="https://latex.codecogs.com/gif.latex?\inline&space;s'(z)&space;=&space;\frac{e^{-z}}{(1&space;&plus;&space;e^{-z})^2}">
+<img src="https://latex.codecogs.com/gif.latex?s'(z)&space;=&space;\frac{e^{-z}}{(1&space;&plus;&space;e^{-z})^2}">
+</p>
+
+And lastly, to differentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s^2}{\partial&space;W^2}"> you substitude <img src="https://latex.codecogs.com/gif.latex?\inline&space;s^2=a^1W^2"> and you get this:
+
+<p align="center">
+<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;E}{\partial&space;W^2}=-\sum(y&space;-&space;\hat{y})s'(s^2)\frac{\partial&space;a^1W^2}{\partial&space;W^2}=-\sum(y&space;-&space;\hat{y})s'(s^2)\frac{\partial&space;a^1}{\partial&space;W^2}">
 </p>
