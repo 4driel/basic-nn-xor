@@ -1,0 +1,1 @@
+\frac{\partial E}{\partial W^2}=\frac{\frac12 \sum (y - \hat{y})^2}{\partial W^2}=\frac12 \sum \frac{\partial(y - \hat{y})^2}{\partial W^2}=-\sum (y-\hat{y}) \frac{\partial \hat{y}}{\partial W^2)
