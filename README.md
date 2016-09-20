@@ -106,8 +106,9 @@ To explain the maths involved in back-propagation, we need to first define how w
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/cost-function.jpg">
 </p>
 
-<p align="center">
 To minimize the error, a gradient descent algorith is used, where the gradients are calculated by the cost function being partially differentiated with respect to each weight set. Looking at the gradient for w<sup>2</sup> first, it would go like this:
+
+<p align="center">
 <img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;\frac{\partial&space;E}{\partial&space;W^2}&space;&=&space;\frac{\frac12&space;\sum&space;(y&space;-&space;\hat{y})^2}{\partial&space;W^2}\\&space;&=&space;\frac12&space;\sum&space;\frac{\partial&space;(y&space;-&space;\hat{y})^2}{\partial&space;W^2}\\&space;&=&space;-\sum&space;(y-\hat{y})\frac{\partial&space;\hat{y}}{\partial&space;W^2}&space;\\&space;&=&space;-\sum&space;(y-\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;W^2}&space;&&&space;\text{substitute&space;}&space;\hat{y}=s(s^2)\\&space;&=&space;-\sum&space;(y-\hat{y})&space;\frac{\partial&space;s(s^2)}{\partial&space;s^2}&space;\frac{\partial&space;s^2}{\partial&space;W^2}&space;&&&space;\text{apply&space;the&space;chain&space;rule}\\&space;\end{align*}" title="\begin{align*} \frac{\partial E}{\partial W^2} &= \frac{\frac12 \sum (y - \hat{y})^2}{\partial W^2}\\ &= \frac12 \sum \frac{\partial (y - \hat{y})^2}{\partial W^2}\\ &= -\sum (y-\hat{y})\frac{\partial \hat{y}}{\partial W^2} \\ &= -\sum (y-\hat{y})\frac{\partial s(s^2)}{\partial W^2} && \text{substitute } \hat{y}=s(s^2)\\ &= -\sum (y-\hat{y}) \frac{\partial s(s^2)}{\partial s^2} \frac{\partial s^2}{\partial W^2} && \text{apply the chain rule}\\ \end{align*}" />
 </p>
 
