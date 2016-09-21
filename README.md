@@ -16,9 +16,9 @@ An artificial neural network is basically a function approximator that is crudel
 
 The distributed way the computations inside an ann are done is what makes them such good approximators. It is said that even the most basic nns can approximate pretty much any continuos function.
 
-To understand how a nn works, we first have to understand what a single artificial neuron does. If we observe the structure of an artificial neuron when compared to a bilogical one, we can spot a lot of similitudes. For instance, the synaptic connections labeled w<sub>1</sub> ... w<sub>n</sub> can be compared to dendrites. These synaptic connections multiply their inputs by a certain factor, so when all inputs are sumated, the degree in which certain inputs influence the final result of the neuron can be altered. 
+To understand how a nn works, we first have to understand what a single artificial neuron does. If we observe the structure of an artificial neuron when compared to a bilogical one, we can spot a lot of similitudes. For instance, the synaptic connections labeled <img src="https://latex.codecogs.com/gif.latex?\inline&space;W_1&space;...&space;W_n" title="W_1 ... W_n" /> can be compared to dendrites. These synaptic connections multiply their inputs by a certain factor, so when all inputs are sumated, the degree in which certain inputs influence the final result of the neuron can be altered. 
 
-The next section of the artificial neuron labeled f(s<sub>1</sub>) is what is called an activation function. Activation functions are non-linear squashing functions that enable nns to approximate complex non-linear functions. That is to say, if activation functions are not added to an nn, no mather how many layers the network has, it would not be able to approximate functions dealing with non linearly separable data.
+The next section of the artificial neuron labeled <img src="https://latex.codecogs.com/gif.latex?\inline&space;f(s_1)" title="f(s_1)" /> is what is called an activation function. Activation functions are non-linear squashing functions that enable nns to approximate complex non-linear functions. That is to say, if activation functions are not added to an nn, no mather how many layers the network has, it would not be able to approximate functions dealing with non linearly separable data.
 
 <p align="center">
   <img src="https://cdn.rawgit.com/4driel/basic-nn-xor/master/images/biological-neuron.svg" height="200">
@@ -48,7 +48,7 @@ Calculating these values is not as hard as it would seem. As, if representing al
 Using the first weigthed sumation as an example. The result could be given like this:
 
 <p align="center">
-  <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/hidden-sum-expanded.jpg">
+  <img src="https://latex.codecogs.com/gif.latex?\begin{smallmatrix}&space;x&space;\\&space;\begin{bmatrix}&space;x^1&space;&&space;x^2&space;\end{bmatrix}&space;\end{smallmatrix}&space;\begin{smallmatrix}&space;W^1\\&space;\begin{bmatrix}&space;w^1_{1,1}&space;&&space;w^1_{1,2}&space;&&space;w^1_{1,3}&space;\\&space;w^1_{2,1}&space;&&space;w^1_{2,2}&space;&&space;w^1_{2,3}&space;\end{bmatrix}&space;\end{smallmatrix}=&space;\begin{smallmatrix}&space;s^1\\&space;\begin{bmatrix}&space;x^1w^1_{1,1}&space;&plus;&space;x^2w^1_{2,1}&space;&&space;x^1w^1_{1,2}&space;&plus;&space;x^2w^1_{2,2}&space;&&space;x^2w^1_{1,3}&space;&plus;&space;x^2w^1_{2,3}&space;\end{bmatrix}&space;\end{smallmatrix}" title="\begin{smallmatrix} x \\ \begin{bmatrix} x^1 & x^2 \end{bmatrix} \end{smallmatrix} \begin{smallmatrix} W^1\\ \begin{bmatrix} w^1_{1,1} & w^1_{1,2} & w^1_{1,3} \\ w^1_{2,1} & w^1_{2,2} & w^1_{2,3} \end{bmatrix} \end{smallmatrix}= \begin{smallmatrix} s^1\\ \begin{bmatrix} x^1w^1_{1,1} + x^2w^1_{2,1} & x^1w^1_{1,2} + x^2w^1_{2,2} & x^2w^1_{1,3} + x^2w^1_{2,3} \end{bmatrix} \end{smallmatrix}" />
 </p>
 <p align="center">
   <img src="https://github.com/4driel/basic-nn-xor/blob/readme-edit/images/hidden-sum.jpg">
@@ -112,7 +112,7 @@ To minimize the error, a gradient descent algorith is used, where the gradients 
 <img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;\frac{\partial&space;E}{\partial&space;W^2}&space;&=&space;\frac{\frac12&space;\sum&space;(y&space;-&space;\hat{y})^2}{\partial&space;W^2}\\&space;&=&space;\frac12&space;\sum&space;\frac{\partial&space;(y&space;-&space;\hat{y})^2}{\partial&space;W^2}\\&space;&=&space;-\sum&space;(y-\hat{y})\frac{\partial&space;\hat{y}}{\partial&space;W^2}&space;\\&space;&=&space;-\sum&space;(y-\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;W^2}&space;&&&space;\text{substitute&space;}&space;\hat{y}=s(s^2)\\&space;&=&space;-\sum&space;(y-\hat{y})&space;\frac{\partial&space;s(s^2)}{\partial&space;s^2}&space;\frac{\partial&space;s^2}{\partial&space;W^2}&space;&&&space;\text{apply&space;the&space;chain&space;rule}\\&space;\end{align*}" title="\begin{align*} \frac{\partial E}{\partial W^2} &= \frac{\frac12 \sum (y - \hat{y})^2}{\partial W^2}\\ &= \frac12 \sum \frac{\partial (y - \hat{y})^2}{\partial W^2}\\ &= -\sum (y-\hat{y})\frac{\partial \hat{y}}{\partial W^2} \\ &= -\sum (y-\hat{y})\frac{\partial s(s^2)}{\partial W^2} && \text{substitute } \hat{y}=s(s^2)\\ &= -\sum (y-\hat{y}) \frac{\partial s(s^2)}{\partial s^2} \frac{\partial s^2}{\partial W^2} && \text{apply the chain rule}\\ \end{align*}" />
 </p>
 
-To diferentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s(s^2))}{\partial&space;s^2}">, you simply calculate the derivative of our activation function.
+To diferentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s(s^2)}{\partial&space;W^2}" title="\frac{\partial s(s^2)}{\partial W^2}" />, you simply calculate the derivative of our activation function.
 
 <p align="center">
 <img src="https://latex.codecogs.com/gif.latex?s'(z)&space;=&space;\frac{e^{-z}}{(1&space;&plus;&space;e^{-z})^2}">
@@ -121,7 +121,7 @@ To diferentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\fr
 And lastly, to differentiate <img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\partial&space;s^2}{\partial&space;W^2}"> you substitude <img src="https://latex.codecogs.com/gif.latex?\inline&space;s^2=a^1W^2"> and you get:
 
 <p align="center">
-<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;E}{\partial&space;W^2}=-\sum(y&space;-&space;\hat{y})s'(s^2)\frac{\partial&space;a^1W^2}{\partial&space;W^2}=-\sum(y&space;-&space;\hat{y})s'(s^2)\frac{\partial&space;a^1}{\partial&space;W^2}">
+<img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;\frac{\partial&space;E}{\partial&space;W^2}&space;&=-\sum&space;(y&space;-&space;\hat{y})&space;s'(s^2)&space;\frac{\partial&space;a^1&space;W^2}{\partial&space;W^2}&space;\\&space;&=-\sum&space;(y&space;-&space;\hat{y})&space;s'(s^2)&space;a^1&space;\end{align*}" title="\begin{align*} \frac{\partial E}{\partial W^2} &=-\sum (y - \hat{y}) s'(s^2) \frac{\partial a^1 W^2}{\partial W^2} \\ &=-\sum (y - \hat{y}) s'(s^2) a^1 \end{align*}" />
 </p>
 
 For w<sup>1</sup> it's the same procedure. There is only need to apply the chain rule and substututions further until you are able to diferentiate with respect to it.
