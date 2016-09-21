@@ -90,9 +90,19 @@ x = np.array(([0,0],[0,1],[1,0],[1,1]), dtype=float)
 y = np.array(([0],[1],[1],[0]), dtype=float)
 
 nn = neuralNetwork()
-nn.forward(x)
 
-print nn.hiddenSum
-print nn.hiddenResult
-print nn.outputSum
-print nn.outputResult
+nn.forward(x)
+print "Hidden sum:\n", nn.hiddenSum, "\n"
+print "Hidden result:\n", nn.hiddenResult, "\n"
+print "Output sum:\n", nn.outputSum, "\n"
+print "Output result:\n", nn.outputResult, "\n"
+
+nn.backward(x, y)
+print "W2 gradient:\n", nn.W2Changes, "\n"
+print "W1 gradient:\n", nn.W1Changes, "\n"
+
+nn.forward(x)
+print "new Hidden sum:\n", nn.hiddenSum, "\n"
+print "new Hidden result:\n", nn.hiddenResult, "\n"
+print "new Output sum:\n", nn.outputSum, "\n"
+print "new Output result:\n", nn.outputResult, "\n"
