@@ -117,7 +117,7 @@ And lastly, to differentiate <img src="https://latex.codecogs.com/gif.latex?\inl
   <img src="https://latex.codecogs.com/gif.latex?\begin{align*}\frac{\partial&space;E}{\partial&space;W^2}&=-\sum(y-\hat{y})s'(s^2)\frac{\partial&space;a^1&space;W^2}{\partial&space;W^2}\\&=-\sum(y-\hat{y})s'(s^2)a^1\end{align*}" title="\begin{align*}\frac{\partial E}{\partial W^2}&=-\sum(y-\hat{y})s'(s^2)\frac{\partial a^1 W^2}{\partial W^2}\\&=-\sum(y-\hat{y})s'(s^2)a^1\end{align*}" />
 </p>
 
-For <img src="https://latex.codecogs.com/gif.latex?\inline&space;W^1" title="W^1" /> it's the same procedure. There is only need to apply the chain rule and substututions further until you are able to diferentiate with respect to it.
+For <img src="https://latex.codecogs.com/gif.latex?\inline&space;W^1" title="W^1" /> it's the same procedure. There is only need to apply the chain rule and substitutions further until you are able to diferentiate with respect to it.
 
 <p align="center">
   <img src="https://latex.codecogs.com/gif.latex?\begin{align*}\frac{\partial&space;E}{\partial&space;W^1}&=-\frac12\sum\frac{\partial(y-\hat{y})^2}{\partial&space;W^1}\\&=-\sum(y-\hat{y})\frac{\partial\hat{y}}{\partial&space;W^1}\\&=-\sum(y-\hat{y})\frac{\partial\hat{y}}{\partial&space;s^2}\frac{\partial&space;s^2}{\partial&space;W^1}\\&=-\sum(y-\hat{y})\frac{\partial&space;s(s^2)}{\partial&space;s^2}\frac{\partial&space;s^2}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)\frac{\partial&space;s^2}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)\frac{\partial&space;a^1W^2}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2\frac{\partial&space;a^1}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2\frac{\partial&space;s(s^1)}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2\frac{\partial&space;s(s^1)}{\partial&space;s^1}\frac{\partial&space;s^1}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2s'(s^1)\frac{\partial&space;s^1}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2s'(s^1)\frac{\partial&space;xW^1}{\partial&space;W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2s'(s^1)x\end{align*}" title="\begin{align*}\frac{\partial E}{\partial W^1}&=-\frac12\sum\frac{\partial(y-\hat{y})^2}{\partial W^1}\\&=-\sum(y-\hat{y})\frac{\partial\hat{y}}{\partial W^1}\\&=-\sum(y-\hat{y})\frac{\partial\hat{y}}{\partial s^2}\frac{\partial s^2}{\partial W^1}\\&=-\sum(y-\hat{y})\frac{\partial s(s^2)}{\partial s^2}\frac{\partial s^2}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)\frac{\partial s^2}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)\frac{\partial a^1W^2}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2\frac{\partial a^1}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2\frac{\partial s(s^1)}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2\frac{\partial s(s^1)}{\partial s^1}\frac{\partial s^1}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2s'(s^1)\frac{\partial s^1}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2s'(s^1)\frac{\partial xW^1}{\partial W^1}\\&=-\sum(y-\hat{y})s'(s^2)W^2s'(s^1)x\end{align*}" />
@@ -150,3 +150,9 @@ Still crappy results. Actually worse. This can happen when the nth dimensional v
 </p>
 
 Pretty great, right?
+
+NOTE: I'll adress overfitting on a later date.
+
+I used these resources when trying to understand nns, maybe you'll also find them useful:
+- http://stevenmiller888.github.io/mind-how-to-build-a-neural-network/
+- https://github.com/stephencwelch/Neural-Networks-Demystified
